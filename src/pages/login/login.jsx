@@ -28,9 +28,9 @@ export default class Login extends Component {
 class LoginForm extends React.Component{
     checkPassword = (rule,value,callback) => {
         if(!value){
-          callback('必须输入密码')
+          callback('密码不能为空')
         }else if(value.length<4 || value.length>8){
-          callback('密码必须是4到8位')
+          callback('密码必须是数字和字母')
         }else {
           callback()
         }
